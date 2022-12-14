@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<style>
+    #img{
+        height: 150px;
+        width: 150px;
+        margin: auto;
+    }
+    .card{
+        width: 500px; 
+        align-items: center;
+        margin: auto;
+    }
+    .cd{
+        width: 300px;
+        background-color: antiquewhite;
+        border-radius: 5px;
+        color: black;
+    }
+    a:hover{
+       text-decoration: solid;
+       font: bold;
+       color: black;
+    }
+    /* a:link{
+        color: black;
+    } */
+</style>
+
+<main>
+    <br>
+    <div class="card card-body container">
+        <img src="{% static 'images/todo.jpg' %}" id="img">
+        <br>
+        <div class="cd card-body container">
+            <a href="{% url 'add' %}" style="text-decoration: none;"  >Add new task</a>
+        </div>
+        <br>
+        <div class="cd card-body container">
+            <a href="{% url 'tasks' %}" style="text-decoration: none;">View Tasks</a>
+        </div>
+    </div>
+</main>
+{% endblock content %}

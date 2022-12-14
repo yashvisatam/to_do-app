@@ -1,0 +1,12 @@
+body{
+   /* background-color: rgb(73, 142, 185)!important;  */
+   background-color: rgb(24, 20, 20) !important; 
+}
+
+.container{
+    text-align: center;
+    width: 50px; 
+    margin: auto;
+    border-color: 2px solid black;
+}
+

@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+<style>
+    .card {
+        width: 500px;
+        align-items: center;
+        margin: auto;
+    }
+</style>
+
+<br>
+<div class="card card-body">
+<form method="POST" action="">
+    {% csrf_token %}
+    <p> Are you sure you want to delete "{{obj}}"? </p>
+    <a href="{{request.META.HTTP_REFERER}}" style="text-decoration: none;">Go Back</a>
+    <input type="submit" value="Confirm">
+</form>
+</div>
+
+
+{% endblock content %}

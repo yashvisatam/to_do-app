@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .submit{
+    background-color: rgb(94, 197, 131);
+    border-radius: 5px;
+    width: 25em;
+}
+.card{
+        width: 500px;
+        align-items: center;
+        margin: auto;
+    }
+.arrow-left{
+    display: inline;
+    float: left;
+}  
+</style>
+<br>
+<div class="card card-body">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div>
+            <a href="{% url 'home' %}" class="arrow-left">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 32 32">
+                  <title>arrow-left</title>
+                  <path
+                    d="M13.723 2.286l-13.723 13.714 13.719 13.714 1.616-1.611-10.96-10.96h27.625v-2.286h-27.625l10.965-10.965-1.616-1.607z">
+                  </path>
+                </svg>
+              </a>
+        </div>
+        <br>
+        <label>Enter task...</label>
+        <br>
+        {{form.tasks}}
+        <br>
+        <br>
+        <input type="submit" value="Submit" class="submit">
+    </form>
+</div>
+{% endblock content %}
